@@ -20,15 +20,14 @@ table tbody tr:hover {background: #ffe8e8; transition-duration: 0.6s;}
 	<tr>
 	<td>Авторы</td>
 	<td>Книги</td>
-	</tr>
-	</thead>
+	</tr> 
 	<tbody>
 
 		{% for a in all_author_list %}
 		<tr><td>{{a.author_name}}</td><td>
-													 	{{a.book}}
+													 	{{a.book_title}}
 														</td></tr>
- 
+
 		{% endfor %}
 		</tbody>>
 		</table>
