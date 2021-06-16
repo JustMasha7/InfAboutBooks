@@ -6,7 +6,6 @@ from django.views import generic
 
 def user(request):
     all_author_list = Author.objects.order_by('author_name')
-    return render(request, 'InfBooks/list.html',{'all_author_list':all_author_list})
-class BookListView(generic.ListView):
-    model = Book
-    context_object_name = 'all_book_list'
+    all_book_list = Book.objects.order_by('book_title')
+    return render(request, 'InfBooks/list.html',{'all_author_list':all_author_list, 'all_book_list':all_book_list})
+ 

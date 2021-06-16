@@ -12,7 +12,8 @@ class Book(models.Model):
 
 
 class Author(models.Model):
-    book = models.ForeignKey(Book, on_delete = models.CASCADE)
+#    book = models.ForeignKey(Book, on_delete = models.CASCADE)
+    book = models.ManyToManyField(Book)
     author_name = models.CharField('Имя автора', max_length = 200)
 
     def __str__(self):
@@ -22,6 +23,6 @@ class Author(models.Model):
         verbose_name = "Автор"
         verbose_name_plural = "Авторы"
 
- 
+
 #    def how_much_book(self):
         #return self.type_cat.count()
