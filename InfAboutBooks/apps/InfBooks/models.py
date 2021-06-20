@@ -1,4 +1,5 @@
 from django.db import models
+#from django.db.models import Count
 
 class Book(models.Model):
     book_title = models.CharField('Название книги', max_length = 300)
@@ -11,13 +12,10 @@ class Book(models.Model):
         verbose_name = "Книга"
         verbose_name_plural = "Книги"
 
-
-
 class Author(models.Model):
     book = models.ManyToManyField(Book)
     author_name = models.CharField('Имя автора', max_length = 200)
     email = models.EmailField(blank=True)
-
     def __str__(self):
         return self.author_name
 
