@@ -10,7 +10,7 @@ urlpatterns = {
 	path('', views.user, name = 'user'),
 	#path('book/create/', BookCreateView.as_view()),
     }
-router = routers.DefaultRouter()
-router.register('api/book', BookViewSet, 'book')
-router.register('api/author', AuthorViewSet, 'author')
-urlpatterns = router.urls
+#router = routers.DefaultRouter()
+#router.register('api/book', BookViewSet, 'book')
+#router.register('api/author', AuthorViewSet, 'author')
+#urlpatterns = router.urls
