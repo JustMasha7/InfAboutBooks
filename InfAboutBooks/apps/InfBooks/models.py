@@ -1,5 +1,4 @@
-from django.db import models
-#from django.db.models import Count
+from django.db import models 
 
 class Book(models.Model):
     book_title = models.CharField('Название книги', max_length = 300)
